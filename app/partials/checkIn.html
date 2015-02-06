@@ -1,0 +1,16 @@
+<div class="module">
+    <div class="bd">
+        <form id="checkinForm">
+            <div class="message error">{{errorMsg}}</div>
+                <fieldset>
+                    <div class="legend">Enter the information below to locate your reservation</div>
+                    <input type="text" placeholder="Last Name"  ng-model="lastName" class="form-controlx" id="id_LastName"/>
+                    <input type="text" placeholder="Confirmation number"  ng-model="cNumber" class="form-controlx col-xs-12" id="id_confirmation" name="cNumber"/>
+                </fieldset>
+                <fieldset class="alt">
+                    <input type="submit" ng-click="submitChekInInfo()" value="Submit" />
+                </fieldset>
+        </form>
+    </div>
+</div>
+

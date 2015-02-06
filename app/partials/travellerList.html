@@ -1,0 +1,41 @@
+<div>
+    <div class="col-xs-12">
+        <p>Select Traveler(s) you wish to check-in</p>
+    </div>
+</div>
+
+<div>
+    <ul>
+        <li ng-repeat="traveller in travellerList">
+            <div class="persons clearfix">
+                <div class="col-xs-2 checkbox-cols">
+                    <div class="checkbox">
+                        <input type="checkbox" id="{{ 'checkboxInput' + $index }}" name="" />
+                        <label for="{{ 'checkboxInput' + $index }}"></label>
+                    </div>
+                </div>
+                <div class="col-xs-7 person-cols">
+                    <div>
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <p>{{traveller.Name.FirstName}} {{traveller.Name.LastName}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <span id="trueNum">TrueBlue # N/A</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 addTrue-cols">
+                    <button type="button" class="btn btn-primary">Add TrueBlue #</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <div class="col-xs-12">
+        <button class="btn btn-primary btn-block" ng-click="">Continue</button>
+    </div>
+</div>

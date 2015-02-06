@@ -1,0 +1,86 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js ng-scope" lang="en" ng-app="MBP"> <!--<![endif]-->
+
+<html lang="en" ng-app="MBP">
+	<head>
+		<title>MBP Next</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=No" / >
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>JetBlue Test</title>
+		
+		<!-- This would be the compiled version of all your .less files into style.css -->
+		<link rel="stylesheet" href="assets/styles/style.css">
+		
+		<!-- Just a config -->
+		<!--script src="app/config/config.js"></script-->
+		
+		<!-- All these core files will be replaced with a concatenated version in the build folder -->
+		
+		<!-- build:js app/components.min.js >
+		<script src="components/angular/angular.min.js"></script>
+		<script src="components/angular/angular-resource.min.js"></script>
+		<!-- endbuild -->
+		
+		<!-- library files-->
+		<script src="components/jbExperience/js/core/angular/angular.min.js"></script>
+		<script src="components/jbExperience/js/core/angular/angular-resource.min.js"></script>
+        <script src="components/jquery-2.1.0.min.js"></script>
+
+		<!-- 
+			These are our dev javascripts. They will be replaced by a minified version in the build folder.
+			We still need them to be there so the .map file can reference them when debugging in production.
+		-->
+		
+		<!-- build:js src/main.js -->
+		<script src="app/main.js"></script>
+		<!-- endbuild -->
+		<!-- build:js src/controllers/checkInCtrl.js -->
+		<script src="app/controllers/checkInCtrl.js"></script>		<!-- endbuild -->
+		<!-- build:js src/controllers/travellerListCtrl.js-->
+		<script src="app/controllers/travellerListCtrl.js"></script>		<!-- endbuild -->
+        <!-- build:js app/controllers/addTrueBlueNumberCtrl.js" -->
+        <script src="app/controllers/addTrueBlueNumberCtrl.js"></script>		<!-- endbuild -->
+        <!-- build:js src/controllers/reviewFlightsCtrl.js-->
+        <script src="app/controllers/reviewFlightsCtrl.js"></script>		<!-- endbuild -->
+		<!-- build:js src/config/services.js -->
+		<script src="app/config/services.js"></script>
+		<!-- endbuild -->
+		<!-- build:js src/model/data.js -->
+		<script src="app/model/data.js"></script>
+		<!-- endbuild -->
+	</head>
+	<body>
+		<div class="app"> 
+    	<div id="deviceready" class="containerx">
+            <header class="navbar navbar-fixed-top" id="header">
+                <!--logo-->
+                <a href="/" class="logo">
+                   <img alt="Jetblue" src="assets/images/logo_320x50.png">
+                </a><!--end logo-->
+                <!--Nav breadcrumbs -->
+                <nav>Home &gt; Check-in & Get boarding pass</nav>
+            </header>
+		
+			<section id="section" class="clearfix view-container">
+	        	<!--Partial rendering -->
+				<div id="content" class="view-frame" ng-view ></div>
+	        </section>
+        
+	        <footer id="footer" class="navbar navbar-fixed-bottom">
+	            <nav>
+	              <a href="#">Help</a> 
+	              <a href="#">Contact us</a> 
+	              <a href="#">Legal</a> 
+	              <a href="#">Feedback</a> 
+	              <a href="http://mobile2.jetblue.com/">View full site</a>
+	            </nav>
+	            <div>&#9400; 2014 JetBlue Airways</div>
+	        </footer><!--Ends footer-->
+		 </div><!--Ends Container-->
+	   	</div><!--Ends-App-->
+	</body>
+</html>

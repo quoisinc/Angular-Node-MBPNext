@@ -1,0 +1,250 @@
+/*Css
+ 
+ * Author: Sam Massaquoi, Jr
+ * JetBlue Mobile
+ Boarding Pass Next
+
+ */
+
+@import "config.less";
+
+
+@import "../../components/jbExperience/js/core/bootstrap/bootstrap.min.css";
+@import "../../components/jbExperience/js/core/bootstrap/bootstrap.min.css.less";
+
+
+body{
+	overflow-x:hidden
+}
+
+header{
+  .logo{
+    background:@wwjcolor2;
+    text-align: center;
+    display: block;
+  }
+  nav{
+    background: #4d90cd;
+    border-top:1px solid #d7d7d7;
+    color:#fff;
+    padding:8px;
+    margin:0;
+    border-radius:none
+  }
+}
+
+
+
+/*
+
+okay lets kill some presentational classing
+section will be our view wrapper
+
+*/
+
+
+section{
+  margin:86px 0;
+}
+.module{
+  .message{
+    border-bottom:1px solid #e5e5e5;
+  }
+  .error{
+    color:#cc0000;
+    padding: 6px 6px 0;
+  }
+  .bd{
+
+  }
+  h1{
+    color:@wwjcolor1;
+    font-family: @font1;
+    text-align: center;
+    font-size: 14px;
+    margin:0;
+    padding:0;
+    font-weight:700;
+  }
+  h2{
+    font-size:14px;
+  }
+  fieldset{
+    padding:6px;
+    background:#f1f5f8;
+  }
+  fieldset.alt{
+    background:#fff;
+  }
+  input[type=text]{
+    margin:6px 0;
+    padding:6px;
+    padding-left:6px; //overwrite bootstrap
+    padding-right:6px; //overwrite bootstrap
+    border-color: #C0C0C0 #F0F0F0 #E7E7E7 #C0C0C0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius:0px;
+    color:@wwjcolor3;
+    width:100%;
+  }
+  input[type=text]:nth-of-type(1){
+    margin-bottom: 0;
+  }
+  button, input[type=submit]{
+    margin:6px 0;
+    border-top: 1px solid #d7d7d7;
+    .btn;
+    .btn-primary;
+    width:100%
+  }
+  input[type=number]{
+    padding:8px 6px;
+    width:100%
+  }
+  .legend{
+    color:@wwjcolor3;
+    font-weight:normal;
+    padding:6px 0;
+    font-size:14px;
+    border-bottom:none;
+    margin-bottom:0;
+  }
+
+  dl.seatassign{
+    dd,dt{ display:inline-block; width:50%; }
+  }
+  dl.departarrive{
+    width:100%;
+    display:block;
+    dt,dd{ float:left; width:50%; }
+    dd{ clear:left;}
+  }
+
+}
+
+
+
+/*
+prevent weird display issues on small screens with floating navigation
+this suppresses the bootstrap desired behavior
+*/
+@media ( max-height: 320px ){
+  .navbar-fixed-bottom{
+    position:static;
+    margin-top:10px;
+  }
+}
+
+
+
+footer{
+  background:@wwjcolor3;
+  color:#fff;
+  padding:8px;
+  border-top:1px solid #d7d7d7;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1em;
+  nav a{
+    padding : 0 .5em;
+    color: white;
+    border-right : 1px solid white;
+  }
+  nav a:last-child{
+     border:none;
+  }
+  nav a:link, nav a:visited{
+    color:#fff;
+  }
+
+}
+
+ul,ol{list-style:none; padding:0;}
+
+
+/* custom check box--------------------------------------------------------------------- */
+.checkbox {
+	width: 50px;
+    position:relative;
+/*new added*/
+    margin-top: 5px;
+}
+
+.checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+  	left: 0;
+	background: #eee;
+	border:1px solid #ddd;
+        border-radius: 4px;
+}
+
+.checkbox label:after {
+    display:none;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 8px;
+    top: 5px;
+    left: 4px;
+    border: 3px solid white;
+	border-top: none;
+	border-right: none;
+    opacity: 0.2;
+    background: transparent;
+
+    
+    -webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkbox label:hover::after{
+    opacity: 0.5;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+    opacity: 1;
+    display: initial;
+}
+.checkbox input[type=checkbox]:checked + label {
+    background: #428bca;
+}
+/* custom check box--------------------------------------------------------------------- */
+
+
+/* presentation classing for travellerlist view; refactor when possible */
+.persons{
+	width: 100%;
+	margin: 10px 0;
+	border-bottom: 2px ridge whitesmoke;
+	padding-top: 18px;
+	padding-bottom: 18px;
+}
+.checkbox-cols{
+	padding: 0;
+	width: 30px;
+	margin-left: 10px;
+}
+#name{
+	color: #428bca;
+	font-weight: bolder;
+}
+#trueNum{
+	color: grey;
+}
+.person-cols{
+	width: 175px;
+	padding-left: 4px;
+	padding-right: 0;
+}
+.addTrue-cols{
+	padding: 0;
+}
+
